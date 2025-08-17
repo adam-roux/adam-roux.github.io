@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Adam Roux</title>
+<meta name="description" content="Adam Roux â€” Growth Marketing Specialist & Digital Strategist. Growth marketing, paid media, SEO, web creation, branding, social media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0b0b0d;--white:#ffffff;--ink:#111113;--muted:#bfc3d9;--peri:#8e9af0;--peri-ink:#5b63b8}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,sans-serif;background:var(--black);color:var(--white);line-height:1.5}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.2rem;border-radius:14px;background:var(--peri);color:var(--black);font-weight:700;letter-spacing:.2px;transition:transform .15s ease, box-shadow .2s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(142,154,240,.25)}
+.btn.alt{background:transparent;color:var(--white);outline:2px solid var(--peri)}
+.tag{display:inline-block;padding:.35rem .7rem;border-radius:999px;background:rgba(142,154,240,.16);color:var(--peri);font-weight:700;font-size:.8rem}
+.section{padding:84px 0}
+.section.dark{background:var(--black)}
+.section.light{background:var(--white);color:var(--ink)}
+.section-title{font-size:2.4rem;line-height:1.1;margin:0 0 18px;font-weight:800;letter-spacing:-.02em}
+.section-sub{color:var(--muted);font-size:1.05rem;margin-top:6px}
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(11,11,13,.65);border-bottom:1px solid rgba(142,154,240,.2)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:800;letter-spacing:.2px}
+.brand-badge{width:12px;height:12px;border-radius:3px;background:linear-gradient(135deg,var(--peri),var(--peri-ink));}
+.menu{display:flex;gap:22px}
+.menu a{padding:10px 8px;border-radius:10px;position:relative}
+.menu a:after{content:"";position:absolute;left:10px;right:10px;bottom:6px;height:2px;background:var(--peri);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.menu a:hover:after{transform:scaleX(1)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:96px 0}
+.hero h1{font-size:3.2rem;line-height:1.04;margin:0 0 14px;letter-spacing:-.03em}
+.hero p{font-size:1.125rem;color:var(--muted);max-width:48ch}
+.hero-cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.hero-card{position:relative;isolation:isolate;background:radial-gradient(1200px 500px at 0% -10%,rgba(142,154,240,.18),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));border:1px solid rgba(142,154,240,.22);border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.hero-media{aspect-ratio:4/5;background:linear-gradient(180deg,rgba(142,154,240,.28),rgba(142,154,240,.06));display:flex;align-items:center;justify-content:center}
+.hero-badge{position:absolute;right:18px;top:18px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.kpi{background:rgba(142,154,240,.1);border:1px solid rgba(142,154,240,.25);border-radius:16px;padding:16px;text-align:center}
+.kpi strong{font-size:1.6rem;display:block}
+.grid{display:grid;gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.service{background:var(--white);color:var(--ink);padding:24px;border-radius:18px;border:1px solid rgba(17,17,19,.08);transition:transform .15s ease, box-shadow .2s ease}
+.service:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(17,17,19,.14)}
+.service h3{margin:0 0 6px;font-size:1.2rem}
+.service p{margin:0;color:#3b3f51}
+.showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid rgba(142,154,240,.22);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));border-radius:18px;overflow:hidden}
+.card .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,rgba(142,154,240,.22),rgba(142,154,240,.04))}
+.card .body{padding:16px}
+.card h4{margin:0 0 6px}
+.logo-row{display:flex;gap:28px;flex-wrap:wrap;align-items:center;opacity:.9}
+.logo{height:28px;width:auto;filter:grayscale(1) contrast(1.1)}
+.cta-panel{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(135deg,rgba(142,154,240,.22),rgba(142,154,240,.06));border:1px solid rgba(142,154,240,.3);border-radius:20px;padding:24px}
+.form{display:grid;gap:14px}
+.input{width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(142,154,240,.35);background:rgba(255,255,255,.04);color:var(--white)}
+.textarea{min-height:120px;resize:vertical}
+.footer{border-top:1px solid rgba(142,154,240,.22);padding:28px 0;color:var(--muted)}
+.marquee{overflow:hidden;white-space:nowrap;position:relative}
+.marquee span{display:inline-block;padding-left:100%;animation:slide 18s linear infinite}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.active{display:flex}
+.modal-card{max-width:900px;width:100%;background:var(--white);color:var(--ink);border-radius:18px;overflow:hidden}
+.modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(17,17,19,.08)}
+.modal-body{padding:18px}
+.close{appearance:none;border:0;background:transparent;font-size:1.6rem;line-height:1}
+@media (max-width:1000px){.hero{grid-template-columns:1fr}.showcase{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.menu{display:none}.kpis{grid-template-columns:1fr 1fr}.showcase{grid-template-columns:1fr}.grid.cols-2,.grid.cols-3{grid-template-columns:1fr}.hero h1{font-size:2.3rem}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand"><span class="brand-badge"></span><span>ADAM ROUX</span></a>
+    <nav class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Show Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
+<main id="home" class="container">
+  <section class="hero">
+    <div>
+      <span class="tag">Growth Marketing Specialist & Digital Strategist</span>
+      <h1>Scaling brands through dataâ€‘driven growth and creative impact</h1>
+      <p>I help businesses scale, optimize, and thrive in the digital world. I specialize in growth strategies, paid media, SEO, web creation, branding, and social media management to drive measurable success.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn">Let's Work Together</a>
+        <a href="#work" class="btn alt">View My Work</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><strong>+120</strong><span>Projects</span></div>
+        <div class="kpi"><strong>+5</strong><span>Years experience</span></div>
+      </div>
+    </div>
+   <div class="hero-card">
+  <div class="hero-media">
+    <img src="adam.png" alt="Hero Image"/>
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#8e9af0"/>
+              <stop offset="100%" stop-color="#5b63b8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section id="about" class="section light">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p class="section-sub">With a deep understanding of market research, competitor analysis, performance marketing, and creative content, I craft dataâ€‘driven campaigns that convert audiences into loyal customers. My approach combines analytics with creativity, ensuring brands donâ€™t just get seenâ€”they make an impact.</p>
+    <div class="grid cols-3" style="margin-top:22px">
+      <div class="service"><h3>Paid Media</h3><p>Google Ads and Meta Ads that drive conversions and maximize ROI.</p></div>
+      <div class="service"><h3>SEO & Maps</h3><p>Visibility boosts via technical SEO, onâ€‘page wins, and Google Business.</p></div>
+      <div class="service"><h3>Social Media</h3><p>Engaging content engines, audience growth, and retention playbooks.</p></div>
+      <div class="service"><h3>Research & Strategy</h3><p>Dataâ€‘driven market and competitor insights to outsmart the field.</p></div>
+      <div class="service"><h3>Web Creation</h3><p>Custom, highâ€‘converting sites built for brand performance.</p></div>
+      <div class="service"><h3>Branding & Design</h3><p>Stunning visuals, motion graphics, and compelling creative.</p></div>
+    </div>
+    <div class="section" style="padding-top:34px;padding-bottom:0">
+      <div class="marquee">
+        <span>Trusted by leading brands â€¢ Strategic marketing â€¢ Paid media â€¢ Digital optimization â€¢ Creative campaigns â€¢ </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section dark">
+  <div class="container">
+    <h2 class="section-title">What We Do</h2>
+    <p class="section-sub">From strategy to execution, we turn clicks into customers and brands into industry leaders.</p>
+    <div class="grid cols-3" style="margin-top:22px">
+      <div class="service"><h3>Paid Media & Advertising</h3><p>Strategic Google Ads and Facebook Ads to maximize ROI.</p></div>
+      <div class="service"><h3>SEO & Google Optimization</h3><p>Search wins powered by analyticsâ€‘driven insights.</p></div>
+      <div class="service"><h3>Social Media Management</h3><p>Content systems and growth for every platform.</p></div>
+      <div class="service"><h3>Market Research & Competitor Analysis</h3><p>Research that uncovers opportunities and segments that convert.</p></div>
+      <div class="service"><h3>Website Creation & Optimization</h3><p>Conversionâ€‘focused builds and continual CRO.</p></div>
+      <div class="service"><h3>Creative Branding & Design</h3><p>Memorable identities, design systems, and motion assets.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section light">
+  <div class="container">
+    <h2 class="section-title">Show Work</h2>
+    <p class="section-sub">A selection of campaigns and builds. Tap any project to view details.</p>
+    <div class="showcase" style="margin-top:22px">
+      <article class="card" data-title="Eâ€‘commerce ROAS Lift" data-body="Scaled Google Ads with granular SKAGs and Performance Max. Result: +4.2x ROAS in 90 days.">
+        <div class="thumb"></div>
+        <div class="body"><h4>Eâ€‘commerce ROAS Lift</h4><p>Google Ads + PMax</p></div>
+      </article>
+      <article class="card" data-title="Lead Gen Engine" data-body="Meta Lead Ads + landing page revamp. Result: CPL down 37%, SQLs up 52%.">
+        <div class="thumb"></div>
+        <div class="body"><h4>Lead Gen Engine</h4><p>Meta + CRO</p></div>
+      </article>
+      <article class="card" data-title="Local SEO Domination" data-body="Maps optimization and reviews surge. Result: +210% discovery searches, calls up 68%.">
+        <div class="thumb"></div>
+        <div class="body"><h4>Local SEO Domination</h4><p>GBP + Reviews</p></div>
+      </article>
+      <article class="card" data-title="Fullâ€‘Stack Rebrand" data-body="Identity, guidelines, and web rebuild. Result: +32% conversion rate, lower CAC.">
+        <div class="thumb"></div>
+        <div class="body"><h4>Fullâ€‘Stack Rebrand</h4><p>Brand + Web</p></div>
+      </article>
+      <article class="card" data-title="Content System" data-body="30â€‘day content calendar, repurposing pipeline, and analytics loop. Result: +280% reach.">
+        <div class="thumb"></div>
+        <div class="body"><h4>Content System</h4><p>Social + Analytics</p></div>
+      </article>
+      <article class="card" data-title="B2B Pipeline" data-body="LinkedIn + search strategy with nurturing. Result: 2.1x SQL volume.">
+        <div class="thumb"></div>
+        <div class="body"><h4>B2B Pipeline</h4><p>Search + LinkedIn</p></div>
+      </article>
+    </div>
+    <div class="cta-panel" style="margin-top:24px">
+      <div>
+        <strong>Want a deeper walkthrough?</strong>
+        <div class="section-sub">Request a private case study pack with metrics and learnings.</div>
+      </div>
+      <a href="#contact" class="btn">Request Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section dark">
+  <div class="container">
+    <h2 class="section-title">Letâ€™s Grow Together</h2>
+    <p class="section-sub">Contact me today and letâ€™s start gaining, scaling, and winning together.</p>
+    <div class="grid cols-2" style="margin-top:22px">
+      <form class="form" id="contactForm" novalidate>
+        <input class="input" type="text" name="name" placeholder="Your name" required>
+        <input class="input" type="email" name="email" placeholder="Email" required>
+        <textarea class="input textarea" name="message" placeholder="Tell me about your goals" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+        <div id="formStatus" style="font-size:.95rem;color:var(--muted)"></div>
+      </form>
+      <div>
+        <div class="card">
+          <div class="body">
+            <h3 style="margin:0 0 6px">Direct</h3>
+            <p style="margin:0 0 10px;color:var(--muted)">Email and phone for quick replies.</p>
+            <p style="margin:0 0 6px"><strong>Email:</strong> <a href="mailto:Adam14roux@gmail.com">Adam14roux@gmail.com</a></p>
+            <p style="margin:0 0 6px"><strong>Phone:</strong> <a href="tel:+212659839162">+212 659839162</a></p>
+            <div style="margin-top:12px"><a href="#home" class="btn alt">Back to Top</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+    <div>Â© <span id="y"></span> Adam Roux. All rights reserved.</div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="#about" class="tag">About</a>
+      <a href="#services" class="tag">Services</a>
+      <a href="#work" class="tag">Show Work</a>
+      <a href="#contact" class="tag">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <div class="modal-header"><strong id="mTitle"></strong><button class="close" id="mClose" aria-label="Close">Ã—</button></div>
+    <div class="modal-body" id="mBody"></div>
+  </div>
+</div>
+
+<script>
+const y=document.getElementById('y');y.textContent=new Date().getFullYear();
+const modal=document.getElementById('modal');
+const mTitle=document.getElementById('mTitle');
+const mBody=document.getElementById('mBody');
+const mClose=document.getElementById('mClose');
+Array.from(document.querySelectorAll('.card')).forEach(card=>{card.addEventListener('click',()=>{mTitle.textContent=card.dataset.title||'';mBody.textContent=card.dataset.body||'';modal.classList.add('active')})});
+mClose.addEventListener('click',()=>modal.classList.remove('active'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('active')});
+const form=document.getElementById('contactForm');
+const statusEl=document.getElementById('formStatus');
+form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form);const name=d.get('name').toString().trim();const email=d.get('email').toString().trim();const msg=d.get('message').toString().trim();if(!name||!email||!msg){statusEl.textContent='Please fill out all fields.';return}const valid=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);if(!valid){statusEl.textContent='Please enter a valid email.';return}statusEl.textContent='Thanks! Your message has been captured.';form.reset()});
+</script>
+</body>
+              </html>
