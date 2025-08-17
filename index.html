@@ -234,20 +234,10 @@ a{color:inherit;text-decoration:none}
       <p>Click for more details</p>
     </div>
   </article>
-
-  <article class="card fade-in" data-title="Another Category" data-link="page2.html">
-    <div class="thumb" style="background-image: url('image2.jpg'); height: 200px; background-size: cover;"></div>
-    <div class="body">
-      <h4>Another Category</h4>
-      <p>Description here</p>
-    </div>
-  </article>
-
-  <!-- Repeat for all 10 categories -->
 </div>
 
 <style>
-  /* Card fade-in */
+ 
   .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -267,7 +257,7 @@ a{color:inherit;text-decoration:none}
 </style>
 
 <script>
-  // Make cards clickable
+ 
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => {
       const link = card.getAttribute('data-link');
@@ -278,29 +268,7 @@ a{color:inherit;text-decoration:none}
   });
 </script>
 
-      <!--
-      <article class="card" data-title="Lead Gen Engine" data-body="Meta Lead Ads + landing page revamp. Result: CPL down 37%, SQLs up 52%.">
-        <div class="thumb"></div>
-        <div class="body"><h4>Lead Gen Engine</h4><p>Meta + CRO</p></div>
-      </article>
-      <article class="card" data-title="Local SEO Domination" data-body="Maps optimization and reviews surge. Result: +210% discovery searches, calls up 68%.">
-        <div class="thumb"></div>
-        <div class="body"><h4>Local SEO Domination</h4><p>GBP + Reviews</p></div>
-      </article>
-      <article class="card" data-title="Fullâ€‘Stack Rebrand" data-body="Identity, guidelines, and web rebuild. Result: +32% conversion rate, lower CAC.">
-        <div class="thumb"></div>
-        <div class="body"><h4>Fullâ€‘Stack Rebrand</h4><p>Brand + Web</p></div>
-      </article>
-      <article class="card" data-title="Content System" data-body="30â€‘day content calendar, repurposing pipeline, and analytics loop. Result: +280% reach.">
-        <div class="thumb"></div>
-        <div class="body"><h4>Content System</h4><p>Social + Analytics</p></div>
-      </article>
-      <article class="card" data-title="B2B Pipeline" data-body="LinkedIn + search strategy with nurturing. Result: 2.1x SQL volume.">
-        <div class="thumb"></div>
-        <div class="body"><h4>B2B Pipeline</h4><p>Search + LinkedIn</p></div>
-      </article>
-    </div>
-    -->
+      
     <div class="cta-panel" style="margin-top:24px">
       <div>
         <strong>Want a deeper walkthrough?</strong>
@@ -340,7 +308,7 @@ a{color:inherit;text-decoration:none}
 
 <footer class="footer">
   <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
-    <div>Â© <span id="y"></span> Adam Roux. All rights reserved.</div>
+    <div>© <span id="y"></span> Adam Roux. All rights reserved.</div>
     <div style="display:flex;gap:12px;align-items:center">
       <a href="#about" class="tag">About</a>
       <a href="#services" class="tag">Services</a>
